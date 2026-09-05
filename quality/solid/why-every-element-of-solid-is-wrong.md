@@ -1,7 +1,7 @@
 # Why Every Element of SOLID is Wrong
 
 Source: <https://speakerdeck.com/tastapod/why-every-element-of-solid-is-wrong>
-## Single Responsability Principle
+## Single Responsibility Principle
 
 "one reason to change"\
 "only do one thing"

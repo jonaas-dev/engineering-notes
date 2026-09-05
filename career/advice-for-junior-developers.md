@@ -64,7 +64,7 @@ Some topics:
 ### 7. Write Functional Code
 :warning: `Functional programming` is not to be confused with `imperative structural programming`.
 
-- Redeable functions minimize the state ([click](https://www.entropywins.wtf/blog/2018/10/24/readable-functions-minimize-state/))
+- [Readable functions: minimize state](../quality/readable-functions.md)
     - MINIMIZE MUTABILITY
     - MINIMIZE SCOPE
 - Readable functions: do one thing ([click](https://www.entropywins.wtf/blog/2018/10/30/readable-functions-do-one-thing/))

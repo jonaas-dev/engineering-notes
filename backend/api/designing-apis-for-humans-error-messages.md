@@ -82,7 +82,7 @@ For starters, let’s be explicit about which customer was not found:
   }
 }
 
-# more more better
+# more better
 {
   status: 404,
   body: {
