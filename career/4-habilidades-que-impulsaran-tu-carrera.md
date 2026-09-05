@@ -6,4 +6,3 @@ Source: <https://www.youtube.com/watch?v=__EWrXgRIaY>
 - APRENDER DE TUS ERRORES
 - Sistematitzar l’aprenentatge dels errors. `SISTEMA DE POSTMORTEM`.
 - CAPACITAT DE JUSTIFICAR LES DECISIONS
-- TODO
