@@ -15,7 +15,7 @@ says why. Where a note summarises a talk or a post, the `Source:` line points at
 | [Career](career/) | Growing as an engineer, seniority, working habits | 26 notes |
 | [Quality](quality/) | Clean code, SOLID, testing, code review | 12 notes |
 | [Backend](backend/) | API design, databases, microservices | 7 notes |
-| DevOps | Git, Linux, Docker, CI/CD, security | *migrating* |
+| [DevOps](devops/) | Git, Linux, tooling | 8 notes |
 | Frontend | CSS, JavaScript, React, the web platform | *migrating* |
 
 Sections marked *migrating* are still being consolidated from their original repositories.
