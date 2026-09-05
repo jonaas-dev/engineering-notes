@@ -47,9 +47,6 @@ As I extended my practice of writing issue threads, `I found that they were a be
 
 :bulb: [en realitat treballar amb issues i no en commits no es un problema, el tio s'ha construit i tot un "exporter" per obtenir totes les dades que no podem obtenir amab un simple clone] ([github-to-sqlite](https://github.com/dogsheep/github-to-sqlite#fetching-pull-requests-for-a-repository))
 
-## Not every commit needs to be “perfect”
-...
-
 ## Write scrappy commits in a branch
 
 I’ll then `squash-merge` them into a single perfect commit (sometimes via a self-closed GitHub pull request) to keep my main branch as tidy as possible.

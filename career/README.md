@@ -68,8 +68,6 @@ Notes whose body is not in English are marked `[ES]` / `[CA]`.
 
 - [My 20 year career is technical debt or deprecated](my-20-year-career-is-technical-debt-or-deprecated.md) —
   ActiveX, Applets, Flash, Silverlight: what survives a career is not the technology.
-- [Product vs project](products-vs-projects.md) — the difference decides who can use what you
-  built, and when the floor falls out from under a commercial platform.
 
 ## Books
 
@@ -84,4 +82,5 @@ Links kept without a note of their own:
 - [Senior engineers are living in the future](https://www.zerobanana.com/essays/living-in-the-future/)
 - [A senior engineer's guide to the system design interview](https://interviewing.io/guides/system-design-interview)
 - [How to contribute to a project you have no idea about](https://grifel.dev/how-to-contribute-without-knowledge)
+- [Product vs project](https://friendshipcastle.zip/blog/product-vs-project) — the distinction decides who can actually use what you built
 - [How to develop an innovation culture](https://blog.logrocket.com/product-management/developing-an-innovation-culture/)

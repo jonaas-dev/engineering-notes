@@ -14,8 +14,6 @@ When you find yourself accidentally passing an ID string argument into a first n
 
 ## A better way to comment
 
-...
-
 However, comments can become out-of-date, and you might not be lucky enough to stumble across the right comment before you embark on a refactoring adventure.
 
 For this reason, we also scatter clues around, like the below.
@@ -31,12 +29,6 @@ If non-determinism creeps into your program, you'll be testing your application,
 ## ...except you can't really avoid nondeterminism, so how do we solve it?
 
 ???
-
-## Stay on top of your testing
-
-### Prefer end-to-end tests
-
-### Know when to add a test
 
 ## Prioritize development velocity
 

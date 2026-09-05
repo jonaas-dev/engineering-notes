@@ -89,23 +89,3 @@ ACID: Atomicity, Consistency, Isolation, Durability
 ### NoSQL
 
 :warning: TODO: will continue
-
-### NewSQL
-
-### Time-series
-
-## :red_circle: Factors to Consider in Database Selection
-
-### Scalability
-
-### Performance
-
-### Data Consistency
-
-### Data Model
-
-### Security
-
-### Cost
-
-### Community and Ecosystem

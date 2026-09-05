@@ -6,17 +6,11 @@ Source: <https://www.willett.io/posts/precepts/>
 
 ---
 
-### No in-code fallbacks for configs
-
-### Extremely strict RPC settings
-
 ### Never give up on local testing
 
 Containerizing the local test environment can make it easier to keep dependencies straight and consistent across machines
 
 :warning: Tool: [toast](https://github.com/stepchowfun/toast).
-
-### Avoid state like the plague
 
 ## Merging (where we’re going, we don’t need tests)
 
@@ -26,39 +20,19 @@ Containerizing the local test environment can make it easier to keep dependencie
 
 Use it for everything – infrastructure, configuration, code, dashboards, on-call rotations. Your git repository is your point-in-time-recoverable source of truth.
 
-### Don’t waste time on code coverage
-
-...
-
 ### Prioritize real-world validation
 
 The highest-value-per-time-spent kind of test is just pushing your change to staging (or better, prod!) and showing it does what you wanted and doesn’t break everything. Second best is integration tests, with unit tests notably coming in last place – i.e. “only if you have some time”.
 
 :warning: [estic super en contra del que diu]
 
-### For infra changes, make plans extremely obvious
-
-...
-
-### For code changes, make regressions extremely obvious
-
-...
-
 ## Deploying (no sleep til prod)
 
 ---
 
-### Use Docker
-
-...
-
 ### Deploy everything all the time
 
 Every day that goes by without you deploying increases the chances that it’s actually secretly been broken (by someone’s change, an dependency update, an third-party API removal), and `it’s very hard to track down what went wrong two weeks after the fact`.
-
-### Validate deployments as they go
-
-...
 
 ### Enable limited “instant” config rollouts
 
@@ -76,12 +50,6 @@ Kubernetes gives infra teams scalability superpowers
 
 Or some other tool for `managing Kubernetes manifests`, I’m not picky – the important thing is that you ~never directly use kubectl apply, edit, or delete. The resource lifecycle needs to be findable in version control.
 
-### Avoid operators and CRDs
-
-...
-
 ### Run 3 of everything
 
 Like with backups, two is one and one is none.
-
-### Structured logs are non-negotiable

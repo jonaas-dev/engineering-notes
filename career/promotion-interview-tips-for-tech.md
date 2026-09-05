@@ -8,14 +8,6 @@ This is called **the Spotlight effect**, the psychological phenomenon by which �
 
 So what’s the solution? You’ve got to make the noise for the tree, so to speak.
 
-## Your value needs to actually be communicated (Spoiler: by you!)
-
-## Why your boss needs to understand your value, not just hear it
-
-## How to sell your value for your promotion interview
-
-### 1. Tell them how your actions have had a concrete impact
-
 ### 2. Find out what accomplishments would amaze them by asking the right questions
 
 If you don’t address your **negative feedback**, you’ll forever be limited in your potential, because you’ll be ignoring the things that are holding them back from saying yes to that promotion you want.
@@ -27,5 +19,3 @@ Or maybe you did adopt something you learned about, and this led to a business i
 ### 4. Your 1-on-1 meetings are a huge promotion opportunity
 
 If you’re going into your 1-on-1 meetings and just giving your boss a boring status update every week or month or whatever, then you’re missing out on a HUGE opportunity to guide your situation to a promotion.
-
-## Conclusion: Communicate your value consciously and constantly

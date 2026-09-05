@@ -69,6 +69,5 @@ echo "Proceeding in test mode";
 ```
 
 ## Designing APIs for humans
-...
 
 visit project of: [Friendly Prefixed IDs for your Ruby on Rails models](https://github.com/excid3/prefixed_ids).

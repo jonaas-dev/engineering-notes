@@ -28,7 +28,6 @@ Scrum Masters had almost no authority, no votes on issues. They were servant lea
 Scrum was invented to function in hostile environments. It’s a contract between hard-pushing managers and developers needing time to think and explore.
 
 ## The Empire Strikes Back
-...
 
 Unfortunately, like many revolutions, the history of Agile didn’t unfold how the founders envisioned.
 

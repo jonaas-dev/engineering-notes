@@ -14,8 +14,6 @@ git config --global user.email
 git config -l
 ```
 
-### :arrow_right: How to configure git (ssh)
-
 #### Verificar les claus ssh
 
 ```

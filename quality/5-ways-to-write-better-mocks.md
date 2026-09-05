@@ -6,7 +6,7 @@ These will help you write tests that `break less`, are `easier to read`, are mor
 
 The focus is on PHPUnit and PHP, yet most of the techniques used, and principles touched upon, are also applicable when using different languages and testing frameworks.
 
-I will use the following, more precise, terminology for the rest of the post:
+> I will use the following, more precise, terminology for the rest of the post:
 
 - `Test Double`: General term for test code that stands in for production code
 - `Stub`: A Test Double that does nothing except for returning hardcoded values

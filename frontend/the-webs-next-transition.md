@@ -18,5 +18,3 @@ As we cover each architecture, we’ll consider specifically the following use c
 - Data mutation - changing data in persistence
 - Rendering logic - displaying data to the user
 - UI Feedback - responding to user interaction
-
-## Multi-Page Apps (MPAs)

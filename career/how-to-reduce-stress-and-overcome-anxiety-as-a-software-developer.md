@@ -2,7 +2,7 @@
 
 Source: <https://andreizgirvaci.com/blog/how-to-reduce-stress-and-overcome-anxiety-as-a-software-developer>
 
-I can only code no more than 2 hours a day, laying in my bed and with a video playing in the background so I don’t feel lonely!
+> I can only code no more than 2 hours a day, laying in my bed and with a video playing in the background so I don’t feel lonely!
 
 ## How did I get there?
 
@@ -16,9 +16,7 @@ I can only code no more than 2 hours a day, laying in my bed and with a video pl
 
 ## My life was about to change
 
-I did meditations, yoga, therapy, affirmations, exercising, read psychology books, began spirituality practices, went on a few silent retreats, reframed past traumas and everything in between you can think of.
-
-## I realized I was not alone
+> I did meditations, yoga, therapy, affirmations, exercising, read psychology books, began spirituality practices, went on a few silent retreats, reframed past traumas and everything in between you can think of.
 
 ## How to overcome anxiety?
 
@@ -35,5 +33,3 @@ So, I would recommend starting to incorporate small things that don't take too m
 - Keep your notifications in check.
 - Listen to relaxing music/ambient noise during work in order to get into the Flow state easier.
 - Educate yourself about mental health!
-
-...

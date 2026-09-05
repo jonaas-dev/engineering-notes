@@ -22,14 +22,10 @@ This is the differentiator, the superpower that separates the best developers fr
 
 Ok, but which traits are the most important? Let's dive a bit deeper into the details.
 
-## 10 Traits of a True Senior Developer
-
 ### 1. Curiosity
 
 - Software development
 - understand business
-
-### 2. Affinity for Problem-Solving
 
 ### 3. Patience
 
@@ -59,7 +55,7 @@ Everything in software development is moving so fast. Technologies are constantl
 
 ### 8. Reliability
 
-I'm repeating it ad nauseam, but software development is a team game. Your colleagues, manager, and company - they all count on you to do your part.
+> I'm repeating it ad nauseam, but software development is a team game. Your colleagues, manager, and company - they all count on you to do your part.
 
 ### 9. Pragmatism
 

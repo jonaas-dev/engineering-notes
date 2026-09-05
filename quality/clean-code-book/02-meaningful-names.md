@@ -265,9 +265,6 @@ Using the same term for two different ideas is essentially a pun.
 
 The name *AccountVisitor* means a great deal to a programmer who is familiar with the VISITOR pattern.  
 
-## Use Problem Domain Names
-...
-
 ## Add Meaningful Context
 
 The function name provides only part of the context; the algorithm provides the rest.
@@ -291,6 +288,3 @@ In an imaginary application called "Gas Station Deluxe" ...
   // Address is a fine name for a class.
   ```
 </details>
-
-## Final Words
-...

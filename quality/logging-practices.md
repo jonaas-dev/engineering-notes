@@ -8,8 +8,6 @@ Source: <https://www.16elt.com/2023/01/06/logging-practices-I-follow/>
 - Am I going to log an object that can be huge on production? If so, can I just log a few metrics of that objects instead? for example, it’s length, or handpick a few important attribute to log.
 - Does the information I am about to log will help me to debug/understand the flow?
 
-## How to log it?
-
 ### Log levels TLDR
 
 - `ERROR`: Parts of the flow failed, we want to send alerts to our on-call for this failures.
@@ -29,6 +27,3 @@ Whatever service you are using for logging, **it costs money**, and a fast way t
 ### Log uniqueness
 
 Each log message in the system should be unique.
-
-### Summary
-...
