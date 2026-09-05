@@ -1,12 +1,17 @@
 # Engineering Notes
 
-Notes I keep on how software gets built and led: architecture, code quality, backend,
-delivery, and the parts of the job that are not code. Kept since 2023, consolidated here from
-eight separate repositories.
+**A reading notebook, not a blog.** This is where I collect, outline and summarise things I
+read about how software gets built and led: architecture, code quality, backend, delivery, and
+the parts of the job that are not code. Kept since 2023, consolidated here from eight separate
+repositories.
 
-These are working notes, not articles. Most distil something I read or watched and thought
-worth keeping; the `Source:` line at the top of each one points at the original. Where a note
-is a summary of someone else's work, it says so.
+**Almost none of this is my own writing.** Nearly every page distils someone else's article,
+talk or book, and the `Source:` line at the top says whose. Quoted passages are marked as
+quotes. What is mine is the selection, the structure, and the command references in
+[DevOps](devops/) — nothing else.
+
+It is published because organised notes are more useful than scattered ones, not as a
+portfolio of original work.
 
 ## Start here
 
@@ -40,8 +45,8 @@ If you only read five:
 
 ## Conventions
 
-- **A note is not an article.** Each one is a distillation with a link to the source. Nothing
-  here pretends to be original research.
+- **A note is not an article.** Each one is a distillation with a link to the source, and
+  often an outline rather than prose.
 - **Structure is English** — section names, folder names, filenames, and this index.
 - **Notes keep the language of their source.** A note on a Spanish talk stays in Spanish;
   reference tables I wrote for myself are often in Catalan. The indexes mark these `[ES]`,
