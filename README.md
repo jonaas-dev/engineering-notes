@@ -46,7 +46,10 @@ If you only read five:
 - **Notes keep the language of their source.** A note on a Spanish talk stays in Spanish;
   reference tables I wrote for myself are often in Catalan. The indexes mark these `[ES]`,
   `[CA]` or `[EN/CA]`, so the mixture is a decision rather than an accident.
-- **Every note carries a `Source:` line.**
+- **Notes that distil something carry a `Source:` line.** The command references in
+  [DevOps](devops/) and the database-types note do not, because they are not
+  distillations of anything — they are mine, written from use. That distinction is the
+  point of stating it.
 - **Images are attributed.** Diagrams that are not mine credit the author and link the
   article. Third-party images carried without attribution were removed and replaced by a link
   to their source.

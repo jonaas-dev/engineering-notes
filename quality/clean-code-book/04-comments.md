@@ -1,5 +1,7 @@
 # Chapter 4 · Comments
 
+Source: *Clean Code: A Handbook of Agile Software Craftsmanship*, Robert C. Martin.
+
 ## Comments Do Not Make Up for Bad Code
 
 One of the more common motivations for writing comments is bad code.

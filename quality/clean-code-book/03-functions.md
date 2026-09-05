@@ -1,5 +1,7 @@
 # Chapter 3 · Functions
 
+Source: *Clean Code: A Handbook of Agile Software Craftsmanship*, Robert C. Martin.
+
 ## Small!
 
 The first rule of function is that they `should be small`. The second rule of functions is that *they should be smaller than that*. :warning:**Functions should hardly ever be 20 lines long**:warning:.

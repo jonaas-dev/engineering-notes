@@ -2,16 +2,16 @@
 
 | Command | Description     |
 | :------------- | :------------- |
-| git init |  |
-| git clone URL |  |
+| git init | Create a repository in the current directory |
+| git clone URL | Copy a remote repository, with its history, into a new directory |
 | git add FILE_NAME | Afegir els canvis del FILE_NAME|
 | git add . | Afegir `tots` els canvis |
 | git checkout FILE_NAME | Descargar canvis (fins a l'últim commit) |
-| git status |  |
+| git status | Show staged, unstaged and untracked changes |
 | git log | llistar tots els commits |
-| git commit |  |
-| git commit -m "MESSAGE" |  |
-| git revert |  |
+| git commit | Record the staged changes, opening the editor for the message |
+| git commit -m "MESSAGE" | Record the staged changes with the message inline |
+| git revert | Undo a commit by adding one that reverses it, keeping history intact |
 
 ## <b> 🚫 PERILL </b>
 
@@ -22,8 +22,8 @@
 
 | Command | Description     |
 | :------------- | :------------- |
-| git push | |
-| git pull | |
+| git push | Send local commits to the remote branch |
+| git pull | Fetch the remote branch and merge it into the current one |
 | git diff FILE_NAME | Veure els canvis |
 | git diff FILE_1~FILE_2 | -- |
 
