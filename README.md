@@ -32,7 +32,7 @@ If you only read five:
 | Section | What's inside | |
 | --- | --- | --- |
 | [Leadership](leadership/) | Quality economics, feedback, hiring, agile in practice | 7 notes |
-| [Career](career/) | Growing as an engineer, seniority, promotion, sustainable work | 26 notes |
+| [Career](career/) | Growing as an engineer, seniority, promotion, sustainable work | 25 notes |
 | [Quality](quality/) | Clean Code, SOLID, testing, code review, logging | 11 notes |
 | [Backend](backend/) | API design, databases, microservices | 7 notes |
 | [DevOps](devops/) | Git, Linux, tooling | 8 notes |

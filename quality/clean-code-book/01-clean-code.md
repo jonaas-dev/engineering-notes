@@ -37,18 +37,6 @@ They don't take the time to go fast!
 
 Keep the code as clean as possible at all times.
 
-##  The Art of Clean Code?
-...
-
-##  What Is Clean Code
-...
-
-## Schools of Thought
-...
-
-## We are authors
-...
-
 ##  The boy scout rule
 _The code has to be kept clean over time_
 
@@ -64,6 +52,3 @@ Adapt: :warning:_"Try and leave this world a little better than you found it ...
 
 Books on art don't promise to make you an artist.\
 "PRACTICE, SON. PRACTICE!"
-
-##  Biography
-...

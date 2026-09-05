@@ -20,11 +20,9 @@ Some parts of some project:
 
 ✅ We can have many instance for cover "traffic" and one instance for Contact (no traffic)
 
-
 ## Project instruduction
 
 - <https://github.com/jonaas-dev/python-microservices>
 - TODO: add frontend repo
 
 Example:
-

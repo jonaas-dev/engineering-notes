@@ -6,13 +6,9 @@ Source: <https://www.scarletink.com/breadth-vs-depth-aka-supporting-job-hopping/
 
  For example, a software engineer would certainly have some programming languages in their toolbox, but also their time management skills, their knowledge of Scrum, and the communication skills they were taught by their mom.
 
-### Programming languages
-
 ### Job roles
 
 The way customers talk about your product is incredibly different from the way you talk about it. It opens your eyes.
-
-### Types of technology
 
 ## Why increase your tool set? #1 Career opportunities
 

@@ -14,4 +14,3 @@ Resum del que hi ha viu:
 - Prestp (Opera)
 - Gecko (Firefox)
 - Goanna (Pale moon)
-...

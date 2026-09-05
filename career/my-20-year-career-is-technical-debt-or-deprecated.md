@@ -9,21 +9,13 @@ Visual Basic, ASP, IE6, and Netscape are all long-forgotten technologies. As Str
 
 Programming languages come and go. Developers don’t want jobs learning skills that aren’t in demand. It is always a balance of supply vs demand! Developers **jump ship quickly** and always want the hot new thing on their resume.
 
-## What happened to ActiveX, Java Applets, Flash, and Silverlight?
-
-...
-
 ## My first mobile app
 
-I built a mobile app in 2004. It’s hard to remember, but the iPhone and Android didn’t exist then. I wrote an application for Compaq PDAs for tracking inventory for car dealers. It was written in C# for the .NET Compact Framework to run on Windows CE.
+> I built a mobile app in 2004. It’s hard to remember, but the iPhone and Android didn’t exist then. I wrote an application for Compaq PDAs for tracking inventory for car dealers. It was written in C# for the .NET Compact Framework to run on Windows CE.
 
 ## You better be Swift
 
-I would argue that any apps written in Objective C are probably technical debt now.
-
-## WebForms
-
-...
+> I would argue that any apps written in Objective C are probably technical debt now.
 
 ## MVC is king! (for a while)
 
@@ -32,10 +24,6 @@ Fast forward to today, and **MVC has since fallen out of fashion**. Everything i
 Do you remember any of these frameworks? Knockout, Ember, Aurelia, Meteor, Backbone, Handlebars
 
 If you used any of them, I bet all that code is now considered technical debt and has fallen out of favor. The first generation of front-end frameworks lost to React and Angular.
-
-## Angular JS
-
-...
 
 ## The old dirty SOAP & WCF
 
@@ -48,14 +36,6 @@ Another common problem is major programming language version changes. Be it Ruby
 ## Stuck on an old external dependency
 
 One of the biggest challenges we had at Stackify was getting stuck on an old version of Elasticsearch.
-
-## Open source alternative retired my code
-
-...
-
-## All code rots or gets replaced
-
-...
 
 ## The reality of technical debt
 

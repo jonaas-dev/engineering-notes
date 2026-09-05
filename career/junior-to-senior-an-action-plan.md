@@ -6,10 +6,6 @@ Source: <https://github.com/readme/guides/engineering-career-success>
 
 Candidates for senior engineering positions should be adept at identifying areas for incremental improvement and at efficiently managing critical service outages by utilizing team resources to quickly minimize adverse effects on customers.
 
-### Connect the dots between engineering and revenue
-
-### Demonstrate your understanding
-
 ### Build a “brag document”
 
 - Completed projects
@@ -17,12 +13,6 @@ Candidates for senior engineering positions should be adept at identifying areas
 - Professional development, Include a record of completed training, courses, and certifications to demonstrate a commitment to ongoing learning and professional growth.
 - Feedback and recognition
 - Open source contributions
-
-## Communicate like a product owner
-
-### Volunteer to mentor and onboard new hires
-
-### Write documentation
 
 ## Continue learning
 

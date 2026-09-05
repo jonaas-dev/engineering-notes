@@ -42,4 +42,4 @@ You might be able to represent two `different concepts` with the same bit of cod
 
 Duplication itself does not matter. We care about code being easy (cheap) to modify without introducing regressions.
 
-:movie_camera: [Ruby on Ales 2014 All The Little Things by Sandi Metz](https://www.youtube.com/watch?v=x1wnI0AxpEU) 
+:movie_camera: [Ruby on Ales 2014 All The Little Things by Sandi Metz](https://www.youtube.com/watch?v=x1wnI0AxpEU)

@@ -94,9 +94,6 @@ For starters, let’s be explicit about which customer was not found:
 ```
 :warning: Note: Be careful with what information you provide in situations like that last bullet point, as it’s possible to leak information that could be a security risk.
 
-## Provide more pieces of the puzzle
-...
-
 ## Be empathetic
 
 The most frustrating error is the 500 error. It means that something went wrong on the API side and therefore wasn’t the developer’s fault. These types of errors could be a momentary glitch or a potential outage on the API provider’s end, which you have no real way of knowing at the time. If the end user relies on your API for a business critical path, then getting these types of errors are very worrying, particularly if you start to get them in rapid succession.

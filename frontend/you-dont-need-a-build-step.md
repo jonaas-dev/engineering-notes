@@ -39,10 +39,7 @@ Then, transform this AST into a representation that is supported by the target l
 
 Finally, generate new code from this new AST representation
 
-### :warning: Minifying
-...
 ### :warning: Bundling
-...
 
 - [`TOOL`] https://github.com/sverweij/dependency-cruiser
 - [Map of dependencies for a basic Next.js App](https://deno.com/blog/you-dont-need-a-build-step/map-of-nextjs-dependencies.svg)
@@ -51,11 +48,5 @@ Finally, generate new code from this new AST representation
 
 `Code splitting` helps "lazy load" things currently needed by the user by loading only what is needed and avoiding code that may never be used. With React, you can experience up to 30% reduction in main bundle size when using code splitting.
 
-## Non-building with Deno and Fresh
-
 ### Just-in-time builds over bundling
 /routes/[slug].tsx
-
-### Just-in-time transpiling
-
-## Better code, faster

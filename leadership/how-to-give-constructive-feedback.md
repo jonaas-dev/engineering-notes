@@ -49,5 +49,3 @@ Phrases like "Next time, try .." or "In the future, it would be better to ... " 
 ## Use "I" statements and listen actively
 
 For example, 👍"I felt the introduction lost people" instead of 👎 "You lost people with that introduction."
-
-## Follow up on progress

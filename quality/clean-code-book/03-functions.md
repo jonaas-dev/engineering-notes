@@ -29,9 +29,6 @@ Functions that do one thing cannot be reasonably divide into sections
 
 Mixing levels of abstraction within a function is always confusing.
 
-### Reading Code from Top to Bottom: *The Stepdown Rule*
-...
-
 ## Switch Statements
 It's hard to make a small switch statement.
 
@@ -253,7 +250,6 @@ public boolean set(String attribute, String value);
 ```java
   if(attributeExists("username")) {
     setAttribute("username", "unclebob");
-    ...
   }
 ```
 </details>
@@ -347,9 +343,6 @@ public enum Error {
 }
 ```
 
-## Don't Repeat Yourself
-...
-
 ## Structured Programming
 
 Some programmers follow Edsger Dijkstra's rules of structured programming.
@@ -366,12 +359,3 @@ Goto only makes sense in large functions, so it should be avoided.
 ## How Do You Write Functions Like This?
 
 Writing software is like any other kind of writing.
-
-## Conclusion
-...
-
-## SetupTeardownIncluder
-...
-
-## Bibliography
-...

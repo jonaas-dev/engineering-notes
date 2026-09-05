@@ -21,8 +21,6 @@ One of the more common motivations for writing comments is bad code.
   }
 ```
 
-## Good Comments
-
 ### Legal Comments
 
 ... for legal reasons. For example, copyright and authorship statements are necessary and reasonable things to put into a comment at the start of each source file.
@@ -71,8 +69,6 @@ A comment may be used to amplify the importance of something that may otherwise 
 ### Javadocs in Public APIs
 
 There is nothing quite so helpful and satisfying as a well-described public API.
-
-## Bad Comments
 
 ### Mumbling (murmuraciones)
 
@@ -232,5 +228,3 @@ The connection between a comment and the code it describes should be obvious.
 ### Example
 
 // TODO
-
-## Bibliography

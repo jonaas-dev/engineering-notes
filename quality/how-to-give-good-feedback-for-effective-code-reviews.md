@@ -8,7 +8,7 @@ You provide screenshots or links to other sources that help explain the benefit 
 
 ## Feedback Technique 2: The “Chameleon” Review
 
-I highly recommend giving feedback via dialogic questions
+> I highly recommend giving feedback via dialogic questions
 
 ## Feedback Technique 3: Two Peas in a Pod
 

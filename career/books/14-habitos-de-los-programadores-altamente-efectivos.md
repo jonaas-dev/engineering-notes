@@ -64,16 +64,3 @@ Señal = información significativa que realmente te interesa (el ruido siempre 
 
 1) “Siempre estar programando” (1h al día)
 2) Referencias a la documentación oficial.
-
-## HÁBITO 3: ENSEÑAR ES IGUAL A APRENDER
-## HÁBITO 4
-## HÁBITO 5
-## HÁBITO 6
-## HÁBITO 7
-## HÁBITO 8
-## HÁBITO 9
-## HÁBITO 10
-## HÁBITO 11
-## HÁBITO 12
-## HÁBITO 13
-## HÁBITO 14

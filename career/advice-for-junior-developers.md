@@ -2,7 +2,6 @@
 
 Source: <https://dev.to/jeroendedauw/advice-for-junior-developers-30am?utm_source=tldrnewsletter>
 
-## :memo: Generic Advice for Juniors
 ### 1. Code is not the Point
 
 Software development is expensive, with the vast majority of the effort of real-world projects typically going into :warning: **maintenance** ([click for more](https://agilemanifesto.org/)). 
@@ -40,8 +39,6 @@ Other links:
 ### 3. Use the BEST Practices
 
 one piece of advice based on my own experiences is to be wary of best practices specific to the community of your language or framework
-
-## :nerd_face: Technical Advice for Juniors
 
 ### 4. Write Tests
 
