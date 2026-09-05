@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
-"""Pre-commit secret scanner.
+"""Pre-commit scanner for credentials and personal data in the staged diff.
 
-Blocks a commit when it would introduce credentials:
-  * an env/secret file (``.env``, ``*.pem``, ``id_rsa`` …) being added, or
-  * an added line that matches a known secret pattern.
+This repository ships to a public GitHub repo and its full history goes with it,
+so a leak is permanent. Two classes are blocked:
 
-Escape a confirmed false positive by appending  ``# pragma: allowlist secret``
-to the offending line. Lines with obvious placeholders (``change-me``,
-``localhost``, ``${...}``, ``os.getenv`` …) are ignored automatically.
+  * **Secrets** — an env/key file being added, or an added line matching a known
+    credential pattern.
+  * **Personal data** — home directory paths, personal email addresses, local
+    hostnames. Screenshots and docs written against a real vault are the likely
+    source.
 
-Run standalone:  python3 ops/scripts/check_secrets.py
+Escape a confirmed false positive by appending one of these to the line:
+
+    # pragma: allowlist secret
+    # pragma: allowlist personal
+
+Placeholders (``change-me``, ``localhost``, ``${...}``, ``os.getenv`` …) are
+ignored automatically for the secret patterns.
+
+Run standalone:  python3 ops/check-secrets.py
 """
+
 from __future__ import annotations
 
 import re
@@ -22,17 +32,15 @@ BLOCKED_FILE = re.compile(r"(^|/)\.env(\.[^/]*)?$|\.pem$|(^|/)id_rsa$|\.p12$|\.p
 ALLOWED_FILE = re.compile(r"\.env\.example$|\.env\.sample$")
 
 # ── Secret value patterns ─────────────────────────────────────────────────────
-PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+SECRET_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ("private key", re.compile(r"-----BEGIN [A-Z ]*PRIVATE KEY-----")),
     ("AWS access key id", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
     ("GitHub token", re.compile(r"\bgh[pousr]_[A-Za-z0-9]{36,}\b")),
     ("Slack token", re.compile(r"\bxox[baprs]-[A-Za-z0-9-]{10,}\b")),
     ("SonarQube token", re.compile(r"\bsq[apu]_[0-9a-f]{40}\b")),
     ("Google API key", re.compile(r"\bAIza[0-9A-Za-z_\-]{35}\b")),
-    (
-        "credentials in URL",
-        re.compile(r"://[^\s:/@]+:[^\s:/@]{3,}@"),
-    ),
+    ("Anthropic API key", re.compile(r"\bsk-ant-[A-Za-z0-9_\-]{20,}\b")),
+    ("credentials in URL", re.compile(r"://[^\s:/@]+:[^\s:/@]{3,}@")),
     (
         "hardcoded secret assignment",
         re.compile(
@@ -46,6 +54,29 @@ PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ),
 ]
 
+# ── Personal data patterns ────────────────────────────────────────────────────
+# Unlike secrets, these are NOT skipped on placeholder-looking lines: a real home
+# path is often surrounded by words like "example".
+PERSONAL_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
+    ("home directory path", re.compile(r"/home/[a-z][a-z0-9_.-]*/|/Users/[a-z][a-z0-9_.-]*/|/c/Users/[A-Za-z]")),
+    ("local hostname", re.compile(r"@[a-z0-9-]+\.local\b")),
+    ("email address", re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")),
+]
+
+# Addresses and paths that are safe by construction.
+PERSONAL_ALLOWED = re.compile(
+    r"""(?ix)
+    users\.noreply\.github\.com
+    | \bnoreply@github\.com\b
+    | noreply@anthropic\.com
+    | example\.(com|org|net)
+    | git@github\.com
+    | \buser@host\b
+    | username[0-9]?@
+    | /Users/(you|user|username)/
+    """
+)
+
 # ── Lines that look like placeholders / safe references ───────────────────────
 PLACEHOLDER = re.compile(
     r"""(?ix)
@@ -55,34 +86,39 @@ PLACEHOLDER = re.compile(
     | getenv\( | settings\. | config\. | \bnull\b | \bnone\b
     """
 )
-ALLOWLIST_PRAGMA = re.compile(r"pragma:\s*allowlist secret|noqa:\s*secret", re.I)
+
+SECRET_PRAGMA = re.compile(r"pragma:\s*allowlist secret|noqa:\s*secret", re.I)
+PERSONAL_PRAGMA = re.compile(r"pragma:\s*allowlist personal", re.I)
+
+HUNK = re.compile(r"^@@ -\d+(?:,\d+)? \+(\d+)(?:,(\d+))? @@")
 
 
 def _git(*args: str) -> str:
-    return subprocess.run(
-        ["git", *args], capture_output=True, text=True, check=True
-    ).stdout
+    return subprocess.run(["git", *args], capture_output=True, text=True, check=True).stdout
 
 
 def blocked_files() -> list[str]:
     out = _git("diff", "--cached", "--name-only", "--diff-filter=A")
-    return [
-        p
-        for p in out.splitlines()
-        if BLOCKED_FILE.search(p) and not ALLOWED_FILE.search(p)
-    ]
+    return [p for p in out.splitlines() if BLOCKED_FILE.search(p) and not ALLOWED_FILE.search(p)]
 
 
-def added_lines() -> list[tuple[str, str]]:
-    """Return (file, line) for every added line in the staged diff."""
+def added_lines() -> list[tuple[str, int, str]]:
+    """Every added line in the staged diff, as (path, line number in the new file, text).
+
+    The hunk header carries the starting line in the post-image, so a finding can
+    point at a real location instead of an offset into the concatenated diff.
+    """
     diff = _git("diff", "--cached", "--unified=0")
-    results: list[tuple[str, str]] = []
-    current = "?"
+    results: list[tuple[str, int, str]] = []
+    path, lineno = "?", 0
     for raw in diff.splitlines():
         if raw.startswith("+++ b/"):
-            current = raw[6:]
+            path = raw[6:]
+        elif (m := HUNK.match(raw)) is not None:
+            lineno = int(m.group(1))
         elif raw.startswith("+") and not raw.startswith("+++"):
-            results.append((current, raw[1:]))
+            results.append((path, lineno, raw[1:]))
+            lineno += 1
     return results
 
 
@@ -92,16 +128,24 @@ def scan() -> list[str]:
     for path in blocked_files():
         problems.append(f"{path}: secret file must not be committed (use .env.example)")
 
-    for path, line in added_lines():
+    for path, lineno, line in added_lines():
         if ALLOWED_FILE.search(path):
             continue
-        if ALLOWLIST_PRAGMA.search(line) or PLACEHOLDER.search(line):
-            continue
-        for label, pat in PATTERNS:
-            if pat.search(line):
-                snippet = line.strip()[:100]
-                problems.append(f"{path}: possible {label} → {snippet}")
-                break
+        snippet = line.strip()[:100]
+
+        if not SECRET_PRAGMA.search(line) and not PLACEHOLDER.search(line):
+            for label, pat in SECRET_PATTERNS:
+                if pat.search(line):
+                    problems.append(f"{path}:{lineno}: possible {label} → {snippet}")
+                    break
+
+        if not PERSONAL_PRAGMA.search(line):
+            stripped = PERSONAL_ALLOWED.sub("", line)
+            for label, pat in PERSONAL_PATTERNS:
+                if pat.search(stripped):
+                    problems.append(f"{path}:{lineno}: {label} → {snippet}")
+                    break
+
     return problems
 
 
@@ -112,13 +156,14 @@ def main() -> int:
         return 0  # not a git context / nothing staged
     if not problems:
         return 0
-    print("\n❌ Pre-commit: posibles secretos detectados:\n", file=sys.stderr)
+    print("\n\033[31m✖ pre-commit: secrets or personal data in the staged diff\033[0m\n", file=sys.stderr)
     for p in problems:
         print(f"   • {p}", file=sys.stderr)
     print(
-        "\n   Mueve el secreto a variables de entorno (.env, gitignored).\n"
-        "   Si es un falso positivo, añade  # pragma: allowlist secret  a la línea.\n"
-        "   Para saltarte el hook (no recomendado): git commit --no-verify\n",
+        "\n   Redact it, or append to the line:\n"
+        "     # pragma: allowlist secret     (confirmed false positive, credential pattern)\n"
+        "     # pragma: allowlist personal   (confirmed false positive, personal data)\n"
+        "   Bypassing the hook (not recommended): git commit --no-verify\n",
         file=sys.stderr,
     )
     return 1
