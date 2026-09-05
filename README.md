@@ -28,6 +28,18 @@ Sections marked *migrating* are still being consolidated from their original rep
 - **Every note carries a `Source:` line** with a link to the original material.
 - **Images are attributed.** Diagrams that are not mine credit the author and link the article.
 
+## Working on this repo
+
+```sh
+sh ops/install-hooks.sh   # once per clone: points git at .githooks/
+./ops/verify.sh           # structural checks, run before every PR
+```
+
+`core.hooksPath` is local config and does not travel with a clone, so the install step is
+required for the pre-commit hook to run at all. The hook refuses any commit that carries a
+credential, a personal path or address, or a committer identity that is not the GitHub
+noreply address.
+
 ## License
 
 [MIT](LICENSE) — the notes are mine; quoted material belongs to the authors credited in each file.

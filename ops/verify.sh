@@ -28,14 +28,38 @@ check "no untranslated 'Font:'" \
 check "no known misspellings" \
     "$(grep -rniE 'managment|enginnering|desarollador|confortable|warnign|aplications|problemes with' --include='*.md' . || true)"
 check "kebab-case paths" \
-    "$(find . -path ./.git -prune -o -type f -print |
-        grep -vE '(^\./(README\.md|LICENSE)$|/README\.md$|^\./\.)' |
+    "$(git ls-files |
+        grep -vE '(^(README\.md|LICENSE)$|/README\.md$|^\.)' |
         grep -E '[A-Z ]|_' || true)"
+# The hook only sees the staged diff. This audits everything already committed,
+# reusing the hook's own patterns so the two can never drift apart.
 check "no personal paths or addresses" \
-    "$(grep -rnE '/home/[a-z]+/|/c/Users/[A-Za-z]|@[a-z0-9-]+\.local' \
-        --include='*.md' . || true)"
-check "single committer email" \
-    "$(git log --all --format='%ae%n%ce' | sort -u | grep -v 'users\.noreply\.github\.com' || true)"
+    "$(PYTHONDONTWRITEBYTECODE=1 python3 - <<'PYEOF' || true
+import pathlib, sys
+sys.path.insert(0, "ops")
+import importlib.util
+spec = importlib.util.spec_from_file_location("cs", "ops/check-secrets.py")
+cs = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(cs)
+import subprocess
+files = subprocess.run(["git", "ls-files", "*.md"], capture_output=True,
+                       text=True).stdout.split()
+for f in map(pathlib.Path, files):
+    for n, line in enumerate(f.read_text(errors="replace").splitlines(), 1):
+        if cs.PERSONAL_PRAGMA.search(line):
+            continue
+        stripped = cs.PERSONAL_ALLOWED.sub("", line)
+        for label, pat in cs.PERSONAL_PATTERNS:
+            if pat.search(stripped):
+                print(f"{f}:{n}: {label} -> {line.strip()[:90]}")
+                break
+PYEOF
+)"
+# Squash merges through the GitHub API are committed by web-flow as
+# noreply@github.com, so that address is expected here and is not a leak.
+check "only noreply committer addresses" \
+    "$(git log --all --format='%ae%n%ce' | sort -u |
+        grep -vE 'users\.noreply\.github\.com|^noreply@github\.com$' || true)"
 
 broken=""
 while IFS= read -r file; do
@@ -48,7 +72,7 @@ while IFS= read -r file; do
         [ -z "$target" ] && continue
         [ -e "$dir/$target" ] || broken="$broken$file -> $target"$'\n'
     done <<< "$targets"
-done < <(find . -path ./.git -prune -o -name '*.md' -print)
+done < <(git ls-files '*.md')
 check "relative links resolve" "${broken%$'\n'}"
 
 printf '\n  weight: %s\n' "$(du -sh --exclude=.git . 2>/dev/null | cut -f1 ||
