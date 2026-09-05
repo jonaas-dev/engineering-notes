@@ -16,9 +16,7 @@ says why. Where a note summarises a talk or a post, the `Source:` line points at
 | [Quality](quality/) | Clean code, SOLID, testing, code review | 12 notes |
 | [Backend](backend/) | API design, databases, microservices | 7 notes |
 | [DevOps](devops/) | Git, Linux, tooling | 8 notes |
-| Frontend | CSS, JavaScript, React, the web platform | *migrating* |
-
-Sections marked *migrating* are still being consolidated from their original repositories.
+| [Frontend](frontend/) | The web platform, React, JavaScript | 5 notes |
 
 ## Conventions
 
