@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+# Blocks a commit that would leak a secret, the wrong committer identity, or a
+# personal path/address. Escape a false positive with  # pragma: allowlist personal
+#
+# Output is materialised before being matched: `git log ... | grep -q` under
+# `set -o pipefail` dies on SIGPIPE and reads back as "no matches", which once
+# produced a false "clean" verdict on a repo that was not clean.
+set -eu
+
+root=$(git rev-parse --show-toplevel)
+expected_email="100514206+jonaas-dev@users.noreply.github.com"
+
+fail() {
+    printf '\n\033[31m✖ pre-commit: %s\033[0m\n\n' "$1" >&2
+    exit 1
+}
+
+actual_email=$(git config user.email || echo "")
+[ "$actual_email" = "$expected_email" ] ||
+    fail "user.email is '${actual_email:-<unset>}', expected the GitHub noreply address."
+
+python3 "$root/ops/check-secrets.py" || exit 1
+
+added=$(git diff --cached --unified=0 | sed -n 's/^+\([^+].*\)/\1/p')
+personal=$(
+    printf '%s\n' "$added" |
+        grep -vE 'pragma:[[:space:]]*allowlist personal' |
+        grep -nE '/home/[a-z][a-z0-9_.-]*/|/Users/[a-z][a-z0-9_.-]*/|/c/Users/[A-Za-z]|@[a-z0-9-]+\.local|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}' |
+        grep -vE 'users\.noreply\.github\.com|example\.(com|org|net)|git@github\.com|username[0-9]?@|user@host' ||
+        true
+)
+
+[ -z "$personal" ] || {
+    printf '\n\033[31m✖ pre-commit: personal data in the staged diff\033[0m\n\n' >&2
+    printf '%s\n' "$personal" >&2
+    printf '\n  Redact it, or append  # pragma: allowlist personal  to the line.\n\n' >&2
+    exit 1
+}
