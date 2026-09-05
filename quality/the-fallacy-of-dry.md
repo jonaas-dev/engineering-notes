@@ -34,12 +34,12 @@ Another result of unification is that code can no longer `evolve separately`. If
 
 That might even be the best thing to do, though it is likely to be harmful design wise. Either way, you start down the path of `corrupting your service`, which now turned into a frog in a pot of water that is being heated.
 
-You might be able to represent two `different concepts` with the same bit of code. This is problematic not only because different concepts need to be able to evolve individually, it’s also `misleading` to have only a single representation in the code, which effectively hides that you are dealing with two different concepts. This is another point that gains importance the bigger the scope of reuse. This is another point that gains importance the bigger the scope of reuse. Domain Driven Design has a strategic pattern called [Bounded Contexts](https://martinfowler.com/bliki/BoundedContext.html), which is about the separation of code that represents different (sub)domains. Generally speaking it is good to avoid sharing code between Bounded Contexts.
+You might be able to represent two `different concepts` with the same bit of code. This is problematic not only because different concepts need to be able to evolve individually, it’s also `misleading` to have only a single representation in the code, which effectively hides that you are dealing with two different concepts. This is another point that gains importance the bigger the scope of reuse. Domain Driven Design has a strategic pattern called [Bounded Contexts](https://martinfowler.com/bliki/BoundedContext.html), which is about the separation of code that represents different (sub)domains. Generally speaking it is good to avoid sharing code between Bounded Contexts.
 
-![BoundedContext](./img/bounded_context.png)
+*(The article illustrates this with a bounded-context diagram; see [Fowler on BoundedContext](https://martinfowler.com/bliki/BoundedContext.html).)*
 
 ## CONCLUSION
 
 Duplication itself does not matter. We care about code being easy (cheap) to modify without introducing regressions.
 
-:movie_camera: [Ruby on Ales 2014 All The Little Things by Sandi Metz](https://www.youtube.com/watch?v=x1wnI0AxpEU) (TODO)
+:movie_camera: [Ruby on Ales 2014 All The Little Things by Sandi Metz](https://www.youtube.com/watch?v=x1wnI0AxpEU) 
