@@ -49,7 +49,6 @@
 
 | Command | Description     |
 | :------------- | :------------- |
-| | |
 
 grep "texto" /home/ *.txt 		// dins un directori
 grep -r "texto" /home/ *.txt  		// dins un directori recursivament
@@ -64,14 +63,14 @@ grep ^# nombre-del-archivo 		// comentaris d'un determinat arxiu
 
 | Command | Description     |
 | :------------- | :------------- |
-| chmod NUM FILE | |
+| chmod NUM FILE | Change permissions, octal notation: owner, group, others (`755`, `644`) |
 
 ## :lock: Zip / Unzip - Rar / Unrar
 
 | Command | Description     |
 | :------------- | :------------- |
 | zip OUTPUT.zip INPUT | Package and compress (archive) files |
-| unzip | |
+| unzip | Extract a .zip archive |
 
 tar czf archivo-comprimido.tar.gz nombre-del-archivo1 nombre-del-archivo2
 tar cjf archivo-comprimido.tar.bz2 nombre-del-archivo1 nombre-del-archivo2
@@ -105,8 +104,8 @@ unrar x nombre_del_rar.rar /ruta/destino/descomprimido
 
 | Command | Description     |
 | :------------- | :------------- |
-| shutdown -r now | |
-| shutdown -h 10:00 | |
+| shutdown -r now | Reboot immediately |
+| shutdown -h 10:00 | Schedule a halt at a given time |
 
 ## :memo: Documentation
 
@@ -120,6 +119,6 @@ unrar x nombre_del_rar.rar /ruta/destino/descomprimido
 
 | Command | Description     |
 | :------------- | :------------- |
-| ssh | |
-| telnet | |
-| sftp | |
+| ssh | Open a shell on a remote host |
+| telnet | Plain-text remote connection; useful to test whether a port answers, never for real access |
+| sftp | Transfer files over SSH |

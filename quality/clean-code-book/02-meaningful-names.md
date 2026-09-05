@@ -1,5 +1,7 @@
 # Chapter 2 · Meaningful Names
 
+Source: *Clean Code: A Handbook of Agile Software Craftsmanship*, Robert C. Martin.
+
 ## Use Intention-Revealing Names
 
 The name of a variable, function, or class, should answer all the big questions. It should tell you **why it exists**, **what it does**, and **how it is used**.

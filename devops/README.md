@@ -8,8 +8,10 @@ Linux commands worth remembering, and what to check before something ships.
 - [Git](git/) — commits worth reading, config and multi-account auth.
 - [Linux](linux/) — commands, tips, tooling.
 
-Notes marked `[CA]` or `[EN/CA]` have Catalan in the body — most of these were reference
-tables written for myself.
+Unlike the rest of the repository, nothing in this section summarises an article. These
+are reference tables I wrote from use and kept adding to, which is why they carry no
+`Source:` line and why the Catalan never got translated out — they were written for me.
+The indexes mark them `[CA]` or `[EN/CA]`.
 
 ## Further reading
 

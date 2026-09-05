@@ -1,5 +1,7 @@
 # Chapter 1 · Clean Code
 
+Source: *Clean Code: A Handbook of Agile Software Craftsmanship*, Robert C. Martin.
+
 ## There will be code
 
 Specifying requirements in such detail that a machine can execute them is _programming_.\
