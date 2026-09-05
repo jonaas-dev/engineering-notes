@@ -8,7 +8,7 @@ The best trick I know of for improving the trustworthiness of documentation is *
 
 1) Pots actualitzar el codi alhora que la documentació (en PR)
 2) You get versioned documentation.
-2) You can integrate your documentation with your automated tests! (see the note on documentation unit tests, arriving with the quality section)
+2) You can integrate your documentation with your automated tests! ([documentation unit tests](https://simonwillison.net/2018/Jul/28/documentation-unit-tests/))
 
 ## :robot: Mechanisms for creating test data
 

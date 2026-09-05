@@ -21,3 +21,11 @@ if [ "$actual_email" != "$expected_email" ]; then
 fi
 
 python3 "$root/ops/check-secrets.py" || exit 1
+
+# Structural checks too. They read the index, so they see what is about to be
+# committed. Running them by hand does not work: it is too easy to read past a
+# failure and commit anyway.
+"$root/ops/verify.sh" >/dev/null 2>&1 || {
+    "$root/ops/verify.sh" >&2
+    exit 1
+}

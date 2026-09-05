@@ -13,7 +13,7 @@ says why. Where a note summarises a talk or a post, the `Source:` line points at
 | --- | --- | --- |
 | [Leadership](leadership/) | Team quality, feedback, hiring, agile in practice | 7 notes |
 | [Career](career/) | Growing as an engineer, seniority, working habits | 26 notes |
-| Quality | Clean code, SOLID, testing, code review, refactoring | *migrating* |
+| [Quality](quality/) | Clean code, SOLID, testing, code review | 12 notes |
 | Backend | API design, databases, Python, PHP, frameworks | *migrating* |
 | DevOps | Git, Linux, Docker, CI/CD, security | *migrating* |
 | Frontend | CSS, JavaScript, React, the web platform | *migrating* |
