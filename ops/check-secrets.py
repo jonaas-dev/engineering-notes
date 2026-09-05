@@ -60,6 +60,9 @@ SECRET_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
 PERSONAL_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
     ("home directory path", re.compile(r"/home/[a-z][a-z0-9_.-]*/|/Users/[a-z][a-z0-9_.-]*/|/c/Users/[A-Za-z]")),
     ("local hostname", re.compile(r"@[a-z0-9-]+\.local\b")),
+    # Newsletter links pasted from a personal inbox carry a subscriber id that
+    # identifies the reader. utm_* params do not and are left alone.
+    ("newsletter subscriber id", re.compile(r"\b(?:ck_)?subscriber_id=\d+")),
     ("email address", re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")),
 ]
 
