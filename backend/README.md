@@ -13,6 +13,9 @@ when splitting a system into services stops helping.
 
 - [Microservices: what they are and when they hurt](microservices.md) — the monolith they
   replace, what the split buys, and the recovery path when it was the wrong call.
+- [Amazon Prime Video: de serverless a monolito](amazon-prime-video-monolith.md) `[CA]` —
+  90% cost reduction by consolidating Lambda + Step Functions into a single process. The
+  real lesson is not "monoliths are better" but "choose architecture based on data flow".
 
 ## Further reading
 

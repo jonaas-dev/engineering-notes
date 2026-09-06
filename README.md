@@ -40,12 +40,19 @@ If you only read five:
 
 | Section | What's inside | |
 | --- | --- | --- |
-| [Leadership](leadership/) | Quality economics, feedback, hiring, agile in practice | 7 notes |
+| [Leadership](leadership/) | Quality economics, feedback, hiring, agile in practice | 8 notes |
 | [Career](career/) | Growing as an engineer, seniority, promotion, sustainable work | 25 notes |
 | [Quality](quality/) | Clean Code, SOLID, testing, code review, logging | 11 notes |
-| [Backend](backend/) | API design, databases, microservices | 7 notes |
+| [Backend](backend/) | API design, databases, microservices | 8 notes |
 | [DevOps](devops/) | Git, Linux, tooling | 8 notes |
 | [Frontend](frontend/) | The web platform, React, JavaScript | 5 notes |
+
+## Community
+
+Active participant in local meetups since 2020:
+
+- [GironaJS](https://www.meetup.com/gironajs/) — JavaScript, AI agents, frontend
+- [Python Girona](https://www.meetup.com/python-girona/) — Python, Django, multi-agent systems
 
 ## Conventions
 
