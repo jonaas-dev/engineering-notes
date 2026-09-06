@@ -23,6 +23,9 @@ quality, how feedback actually lands, who you hire, and what agile turned into o
   about individuals and interactions ended up sold as processes and tools.
 - [Employed in Tech for Years but Almost Never Worked](employed-in-tech-for-years-but-almost-never-worked.md)
   `[ES/CA]` — task bloating, ceremony mistaken for progress, and hype-driven adoption.
+- [People Want Products, Not Projects](people-want-products-not-projects.md) `[CA]` —
+  the confusion between delivering features and solving user problems, and why the
+  incentive model decides which one you get.
 
 ## Further reading
 

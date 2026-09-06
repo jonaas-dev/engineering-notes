@@ -6,6 +6,9 @@
   deserialising inline columns, external storage (TOAST), network transmission.
 - [Relational databases aren't dinosaurs, they're sharks](relational-databases-are-sharks.md) —
   the "they don't scale, they aren't agile" criticisms, and the narrow contexts where they hold.
+- [How Discord Stores Trillions of Messages](how-discord-stores-trillions-of-messages.md) `[CA]` —
+  MongoDB → Cassandra → ScyllaDB: why they migrated, how they did it with zero downtime in nine
+  days, and the Rust data services layer that absorbed hot partitions.
 
 ## Further reading
 
