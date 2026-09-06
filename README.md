@@ -2,8 +2,12 @@
 
 **A reading notebook, not a blog.** This is where I collect, outline and summarise things I
 read about how software gets built and led: architecture, code quality, backend, delivery, and
-the parts of the job that are not code. Kept since 2023, consolidated here from eight separate
-repositories.
+the parts of the job that are not code.
+
+The notes were written over several years and then scattered — across folders on my machine and
+across eight separate repositories, most of them untouched since 2023. This is that material
+found, gathered into one place and put in order. It is not a notebook I have been diligently
+keeping; it is one I finally tidied.
 
 **Almost none of this is my own writing.** Nearly every page distils someone else's article,
 talk or book, and the `Source:` line at the top says whose. Quoted passages are marked as
