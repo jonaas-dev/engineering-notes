@@ -16,6 +16,9 @@ when splitting a system into services stops helping.
 - [Amazon Prime Video: de serverless a monolito](amazon-prime-video-monolith.md) `[CA]` —
   90% cost reduction by consolidating Lambda + Step Functions into a single process. The
   real lesson is not "monoliths are better" but "choose architecture based on data flow".
+- [Architecture Patterns with Python (Cosmic Python)](cosmic-python.md) — DDD, TDD and
+  event-driven architecture patterns applied to Python: Repository, Unit of Work, Aggregates,
+  Message Bus, CQRS and Dependency Injection.
 
 ## Further reading
 
